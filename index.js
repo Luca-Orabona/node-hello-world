@@ -1,2 +1,6 @@
 console.log("Hello Boolean");
-// cambio del titolo tramite lo script "dev" senza fermare il server con uso di --watch
+
+const word = process.argv[2];
+const word2 = process.argv[3];
+
+console.log(`${word} ${word2}`);
