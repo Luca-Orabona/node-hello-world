@@ -1,9 +1,10 @@
 // funzione che restituisce il numero di vocali
 const numVocali = (string) => {
+    string = string.toUpperCase();
     let contVocali = 0;
-    const vocali = "aeiou";
-    for(let lettera of vocali) {
-        if(string.toUpperCase().includes(lettera.toUpperCase())) {
+    const vocali = "AEIOU";
+    for(let lettera of string) {
+        if(vocali.includes(lettera)) {
             contVocali++
         }
     }
@@ -14,10 +15,10 @@ const numVocali = (string) => {
 
 // funzione che restituisce il numero più grande
 function numMax (arrayNum) {
-
-    let numMax = parseInt(arrayNum[0]);
+    arrayNum = arrayNum.map(num => parseInt(num));
+    let numMax = arrayNum[0];
     arrayNum.forEach(num => {
-        if(numMax < parseInt(num)) {
+        if(numMax < num) {
             numMax = num;
         }
     })
