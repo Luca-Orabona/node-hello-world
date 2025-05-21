@@ -1,6 +1,21 @@
-console.log("Hello Boolean");
+import {numVocali, numMax} from "./function.js";
 
-const word = process.argv[2];
-const word2 = process.argv[3];
+// Concateno nel caso ci siano più parole  
+let phrase = "";
+for (let i = 2; i < process.argv.length; i++) {
+    phrase += process.argv[i];
+}
 
-console.log(`${word} ${word2}`);
+// Uso phrase come argomento per trovare le vocali sia di una singola parola che di una frase
+console.log(numVocali(phrase));
+
+
+// Creo array di numeri 
+const arrayNum = [];
+for (let i = 2; i < process.argv.length; i++) {
+    arrayNum.push(process.argv[i]);
+}
+
+// Uso l'array di numeri presi dal terminale come argomento della funzione
+console.log(numMax(arrayNum));
+
